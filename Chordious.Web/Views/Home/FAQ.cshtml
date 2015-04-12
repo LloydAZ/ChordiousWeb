@@ -1,0 +1,123 @@
+﻿@{
+    ViewBag.Title = "FAQ";
+}
+<div class="jumbotron">
+    <h2>FAQ's - Frequently Asked Questions</h2>
+</div>
+
+<div>
+    <p style="color: red"><b>What is different between Chordious and Chordious Web?</b></p>
+    <p>Chordious Web only contains a subset of what the full version of Chordious is capable of.  Primarily Chordious Web is only the "Chord Finder"
+    option that is part of the full version of Chordious.  It serves as a quick online Chord Dictionary.  The full version of Chordious does so much
+    more.  Please check it out at: <a href="http://chordious.com" target="_blank">http://chordious.com</a></p>
+</div>
+<hr />
+<div>
+    <p style="color: red"><b>Can I save the chord diagrams?</b></p>
+    <p>Look at the "How To Use Chordious Web" page.  There is a section there that will explain how to save the chord diagrams.</p>
+</div>
+<hr />
+<div>
+    <p style="color: red"><b>Are there any restrictions on usage of the chord diagrams?</b></p>
+    <p>No restrictions at all.  Use them in whatever medium you want, even in books or documents that you are planning to sell.</p>
+</div>
+<hr />
+<div>
+    <p style="color: red"><b>Why doesn't Chordious Web work in my browser?</b></p>
+    <p>Chordious Web is an HTML 5 compliant website.  If you are using an older browser, your experience on the site will vary from "it works fine" to
+    "it just doesn't work at all!"</p>
+    <p>If you are running Windows XP and are using Internet Explorer, I highly doubt that Chordious Web will work at all.  In either case, you should 
+    try downloading a newer browser such as <a href="https://www.mozilla.org/en-US/firefox/all/" target="_blank">FireFox</a>,
+    <a href="https://www.google.com/chrome/browser/desktop/index.html" target="_blank">Google Chrome</a>, or 
+    <a href="http://www.opera.com/" target="_blank">Opera</a>.  The current versions of these browsers are all HTML 5 compliant and Chordious Web works
+    fine in all of them.</p>
+    <p>Chordious web also uses a lot of javascript for the controls on the page. if you have javascript disabled on your browser you're not going to be 
+    able to do anything.</p>
+</div>
+<hr />
+<div>
+    <p style="color: red"><b>Why is Chordious Web only in English?</b></p>
+    <p>English is the only language that I know (other than some American Sign Language).</p>
+</div>
+<hr />
+<div>
+    <p style="color: red"><b>Why is there an option to mirror the chords?  Don't left handed players play their instrument the same as right-handed players?</b></p>
+    <p>Some left-handed players play their instrument in a right-handed position.  However, some left-handed players like to string their instruments in a reverse
+    order so that they can play it using their left hand for strumming and picking and their right hand for fretting.  In this case, the chord diagrams are
+    backwards.  The problem that most left-handed musicians face is that the vast majority of chord diagrams that exist for any stringed instrument are all
+    written for right-handed players.  The left-handed player then has to learn to read the diagram "mirrored" in order to play the chord correctly.  Both
+    Chordious and Chordious Web provide a method to generate left-handed chord diagrams to make life simpler for left-handed players.</p>
+</div>
+<hr />
+<div>
+    <p style="color: red"><b>What do the circles, X's and numbers mean in the chord diagrams?</b></p>
+    <img src="~/Images/ChordDiagramExplanation.PNG" />
+    <ul>
+        <li>The circles represent an open string.  The string is played without it being fretted.</li>
+        <li>The X's represent muted strings.  These are strings that are not played, or are muted when strummed as to not produce a sound.</li>
+        <li>The number on the right represents the fret position on the fingerboard.  In the above example the chord fingering starts at the seventh fret.</li>
+    </ul>
+</div>
+<hr />
+<div>
+    <p style="color: red"><b>What do you mean by a chord diagram that is not finger friendly?</b></p>
+    <img src="~/Images/NotFingerFriendly.PNG" />
+    <p>Take a look at the above chord diagram for a Guitalele using standard tuning.  The chord is correct as far as the notes that are required to play it,
+    however the finger positions on this chord would be anywhere from difficult to impossible to play correctly.</p>
+</div>
+<hr />
+<div>
+    <p style="color: red"><b>What browsers has this been tested with?</b></p>
+    <ul>
+        <li>Internet Explorer 11 - Windows 7</li>
+        <li>Firefox 34.0.5 - Windows 7</li>
+        <li>Google Chrome 39.0.2171.95 m - Windows 7</li>
+        <li>Opera 26.0.1656.32 - Windows 7</li>
+        <li>Safari for PC (Does not work) - Windows 7</li>
+        <li>Safari - iPad</li>
+        <li>Google Chrome - iPad</li>
+        <li>Opera Mini - iPad</li>
+        <li>IceWeasel - Linux</li>
+        <li>Google Chrome - Android Phone</li>
+        <li>Internet Explorer - Windows Phone 8.1</li>
+    </ul>
+    <p>Theoretically, Chordious Web should run on any HTML 5 compliant browser.</p>
+</div>
+<hr />
+<div>
+    <p style="color: red"><b>Why doesn't instrument "X" appear in the list of instruments?</b></p>
+    <p>Theoretically, any stringed instrument should be able to be added to the list.  I have only included the ones that Jon had available in the configuration file 
+    that is part of the full Chordious application.  If there is an instrument that you would like added to the list, please contact me with the following information</p>
+    <ul>
+        <li>Instrument Name</li>
+        <li>Number of Strings</li>
+        <li>Standard Tuning</li>
+        <li>Optional - Any additional Tunings</li>
+    </ul>
+    <p>If possible, I will add the instrument to the configuration file and you should be able to see it and generate chords.</p>
+</div>
+<hr />
+<div>
+    <p style="color: red"><b>Why doesn't "X" tuning appear for "X" instrument?</b></p>
+    <p>The tunings that appear were also taken from the configuration file that Jon included as part of the full Chordious application.  If there are additional
+    tunings for a particular instrument that you are interested in seeing, please contact me and if possible I will add the tuning to the configuration file and
+    you should be able to see it and generate chords.</p>
+</div>
+<hr />
+<div>
+    <p style="color: red"><b>What programming language was used?</b></p>
+    <p>Both Chordious and Chordious Web were written in C#.  Chordious Web also utilizes HTML 5 and JavaScript.</p>
+    <p>The full Chordious application was built using the MONO framework, which makes it usable across different platforms, as long as the MONO runtime is installed 
+    on your machine.</p>
+</div>
+<hr />
+<div>
+    <p style="color: red"><b>Is the source code for Chordious Web available?</b></p>
+    <p>Currently no, but if you really want it ask nicely and I may give it to you.</p>
+</div>
+<hr />
+<div>
+    <p style="color: red"><b>What instrument do you play?</b></p>
+    <p>Ukulele</p>
+</div>
+<hr />

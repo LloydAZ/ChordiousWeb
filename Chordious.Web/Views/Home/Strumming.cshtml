@@ -1,0 +1,547 @@
+﻿@{
+    ViewBag.Title = "Strumming Patterns";
+}
+
+<div class="jumbotron">
+    <h2>@ViewBag.Title</h2>
+</div>
+
+<div class="row">
+    <div class="col-lg-12">
+        <div style="background: rgba(0, 0, 0, 0.15); padding:10px; border: inset; border-radius: 10px">
+            <p>
+                The strum patterns are displayed as two measures.  In some cases (Bo Diddley Strum and Brazillian Strum) it takes a full two measures
+                to play the complete strum pattern.
+            </p>
+            <p><h4>Notation:</h4></p>
+            <ul>
+                <li>D - Down strum</li>
+                <li>U - Up Strum</li>
+                <li>d - Down Strum - Less Emphasis</li>
+                <li>u - Up Strum - Less Emphasis</li>
+                <li>T - Thumb Strum - Either strum all of the strings with the thumb, or just the top string (usually the lowest tone, except with re-entrant tuned instruments.)</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<br />
+<div class="row">
+    <div class="col-lg-12">
+        <div id="accordion">
+            <h3>4/4 Time</h3>
+            <div>
+                <table id="patterns">
+                    <thead>
+                        <tr>
+                            <th>Pattern</th>
+                            <th colspan="8">Measure 1</th>
+                            <th colspan="8">Measure 2</th>
+                        </tr>
+                        <tr>
+                            <th></th>
+                            <th>1</th>
+                            <th>+</th>
+                            <th>2</th>
+                            <th>+</th>
+                            <th>3</th>
+                            <th>+</th>
+                            <th>4</th>
+                            <th>+</th>
+                            <th>1</th>
+                            <th>+</th>
+                            <th>2</th>
+                            <th>+</th>
+                            <th>3</th>
+                            <th>+</th>
+                            <th>4</th>
+                            <th>+</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Down Strum</td>
+                            <td>D</td>
+                            <td></td>
+                            <td>D</td>
+                            <td></td>
+                            <td>D</td>
+                            <td></td>
+                            <td>D</td>
+                            <td></td>
+                            <td>D</td>
+                            <td></td>
+                            <td>D</td>
+                            <td></td>
+                            <td>D</td>
+                            <td></td>
+                            <td>D</td>
+                            <td></td>
+                        </tr>
+                        <tr class="alt">
+                            <td>Double Strum</td>
+                            <td>D</td>
+                            <td>U</td>
+                            <td>D</td>
+                            <td>U</td>
+                            <td>D</td>
+                            <td>U</td>
+                            <td>D</td>
+                            <td>U</td>
+                            <td>D</td>
+                            <td>U</td>
+                            <td>D</td>
+                            <td>U</td>
+                            <td>D</td>
+                            <td>U</td>
+                            <td>D</td>
+                            <td>U</td>
+                        </tr>
+                        <tr>
+                            <td>One Measure Downbeats, One Measure Up and Downbeats</td>
+                            <td>D</td>
+                            <td></td>
+                            <td>D</td>
+                            <td></td>
+                            <td>D</td>
+                            <td></td>
+                            <td>D</td>
+                            <td></td>
+                            <td>D</td>
+                            <td>U</td>
+                            <td>D</td>
+                            <td>U</td>
+                            <td>D</td>
+                            <td>U</td>
+                            <td>D</td>
+                            <td>U</td>
+                        </tr>
+                        <tr class="alt">
+                            <td>Split the Measure</td>
+                            <td>D</td>
+                            <td></td>
+                            <td>D</td>
+                            <td></td>
+                            <td>D</td>
+                            <td>U</td>
+                            <td>D</td>
+                            <td>U</td>
+                            <td>D</td>
+                            <td></td>
+                            <td>D</td>
+                            <td></td>
+                            <td>D</td>
+                            <td>U</td>
+                            <td>D</td>
+                            <td>U</td>
+                        </tr>
+                        <tr>
+                            <td>Emphasize the One Downbeat</td>
+                            <td>D</td>
+                            <td></td>
+                            <td>d</td>
+                            <td>u</td>
+                            <td>d</td>
+                            <td>u</td>
+                            <td>d</td>
+                            <td>u</td>
+                            <td>D</td>
+                            <td></td>
+                            <td>d</td>
+                            <td>u</td>
+                            <td>d</td>
+                            <td>u</td>
+                            <td>d</td>
+                            <td>u</td>
+                        </tr>
+                        <tr class="alt">
+                            <td>Emphasize the Two Downbeat</td>
+                            <td>d</td>
+                            <td>u</td>
+                            <td>D</td>
+                            <td></td>
+                            <td>d</td>
+                            <td>u</td>
+                            <td>d</td>
+                            <td>u</td>
+                            <td>d</td>
+                            <td>u</td>
+                            <td>D</td>
+                            <td></td>
+                            <td>d</td>
+                            <td>u</td>
+                            <td>d</td>
+                            <td>u</td>
+                        </tr>
+                        <tr>
+                            <td>Latin Strum</td>
+                            <td>D</td>
+                            <td></td>
+                            <td>D</td>
+                            <td>u</td>
+                            <td></td>
+                            <td>u</td>
+                            <td>d</td>
+                            <td>u</td>
+                            <td>D</td>
+                            <td></td>
+                            <td>D</td>
+                            <td>u</td>
+                            <td></td>
+                            <td>u</td>
+                            <td>d</td>
+                            <td>u</td>
+                        </tr>
+                        <tr class="alt">
+                            <td>Latin Strum - Variation</td>
+                            <td>D</td>
+                            <td>u</td>
+                            <td>d</td>
+                            <td>u</td>
+                            <td></td>
+                            <td>u</td>
+                            <td>d</td>
+                            <td>u</td>
+                            <td>D</td>
+                            <td>u</td>
+                            <td>d</td>
+                            <td>u</td>
+                            <td></td>
+                            <td>u</td>
+                            <td>d</td>
+                            <td>u</td>
+                        </tr>
+                        <tr>
+                            <td>Syncopated Strum</td>
+                            <td>D</td>
+                            <td></td>
+                            <td>D</td>
+                            <td>u</td>
+                            <td></td>
+                            <td>u</td>
+                            <td>d</td>
+                            <td></td>
+                            <td>D</td>
+                            <td></td>
+                            <td>D</td>
+                            <td>u</td>
+                            <td></td>
+                            <td>u</td>
+                            <td>d</td>
+                            <td></td>
+                        </tr>
+                        <tr class="alt">
+                            <td>Country Strum</td>
+                            <td>D</td>
+                            <td></td>
+                            <td>D</td>
+                            <td>U</td>
+                            <td>D</td>
+                            <td></td>
+                            <td>D</td>
+                            <td>U</td>
+                            <td>D</td>
+                            <td></td>
+                            <td>D</td>
+                            <td>U</td>
+                            <td>D</td>
+                            <td></td>
+                            <td>D</td>
+                            <td>U</td>
+                        </tr>
+                        <tr>
+                            <td>Offbeat Single Strum</td>
+                            <td></td>
+                            <td>U</td>
+                            <td></td>
+                            <td>U</td>
+                            <td></td>
+                            <td>U</td>
+                            <td></td>
+                            <td>U</td>
+                            <td></td>
+                            <td>U</td>
+                            <td></td>
+                            <td>U</td>
+                            <td></td>
+                            <td>U</td>
+                            <td></td>
+                            <td>U</td>
+                        </tr>
+                        <tr class="alt">
+                            <td>Offbeat Single Strum - Variation</td>
+                            <td>D</td>
+                            <td>U</td>
+                            <td></td>
+                            <td>U</td>
+                            <td></td>
+                            <td>U</td>
+                            <td></td>
+                            <td>U</td>
+                            <td>D</td>
+                            <td>U</td>
+                            <td></td>
+                            <td>U</td>
+                            <td></td>
+                            <td>U</td>
+                            <td></td>
+                            <td>U</td>
+                        </tr>
+                        <tr>
+                            <td>Bo Diddley Strum - Two Measures</td>
+                            <td>D</td>
+                            <td></td>
+                            <td></td>
+                            <td>U</td>
+                            <td>D</td>
+                            <td></td>
+                            <td>D</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>D</td>
+                            <td></td>
+                            <td>D</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr class="alt">
+                            <td>Brazilliam Strum - Two Measures</td>
+                            <td>D</td>
+                            <td></td>
+                            <td>D</td>
+                            <td></td>
+                            <td>D</td>
+                            <td>U</td>
+                            <td></td>
+                            <td>U</td>
+                            <td></td>
+                            <td>U</td>
+                            <td></td>
+                            <td>U</td>
+                            <td>D</td>
+                            <td></td>
+                            <td>D</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Boom Chuck Strum</td>
+                            <td>T</td>
+                            <td></td>
+                            <td>D</td>
+                            <td></td>
+                            <td>T</td>
+                            <td></td>
+                            <td>D</td>
+                            <td></td>
+                            <td>T</td>
+                            <td></td>
+                            <td>D</td>
+                            <td></td>
+                            <td>T</td>
+                            <td></td>
+                            <td>D</td>
+                            <td></td>
+                        </tr>
+                        <tr class="alt">
+                            <td>Thumb Strum</td>
+                            <td>T</td>
+                            <td>u</td>
+                            <td>d</td>
+                            <td>u</td>
+                            <td>T</td>
+                            <td>u</td>
+                            <td>d</td>
+                            <td>u</td>
+                            <td>T</td>
+                            <td>u</td>
+                            <td>d</td>
+                            <td>u</td>
+                            <td>T</td>
+                            <td>u</td>
+                            <td>d</td>
+                            <td>u</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <h3>3/4 Time</h3>
+            <div>
+                <table id="patterns">
+                    <thead>
+                        <tr>
+                            <th>Pattern</th>
+                            <th colspan="6">Measure 1</th>
+                            <th colspan="6">Measure 2</th>
+                        </tr>
+                        <tr>
+                            <th></th>
+                            <th>1</th>
+                            <th>+</th>
+                            <th>2</th>
+                            <th>+</th>
+                            <th>3</th>
+                            <th>+</th>
+                            <th>1</th>
+                            <th>+</th>
+                            <th>2</th>
+                            <th>+</th>
+                            <th>3</th>
+                            <th>+</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Down Strum</td>
+                            <td>D</td>
+                            <td></td>
+                            <td>D</td>
+                            <td></td>
+                            <td>D</td>
+                            <td></td>
+                            <td>D</td>
+                            <td></td>
+                            <td>D</td>
+                            <td></td>
+                            <td>D</td>
+                            <td></td>
+                        </tr>
+                        <tr class="alt">
+                            <td>Double Strum</td>
+                            <td>D</td>
+                            <td>U</td>
+                            <td>D</td>
+                            <td>U</td>
+                            <td>D</td>
+                            <td>U</td>
+                            <td>D</td>
+                            <td>U</td>
+                            <td>D</td>
+                            <td>U</td>
+                            <td>D</td>
+                            <td>U</td>
+                        </tr>
+                        <tr>
+                            <td>Waltz Strum 1</td>
+                            <td>T</td>
+                            <td></td>
+                            <td>D</td>
+                            <td></td>
+                            <td>D</td>
+                            <td></td>
+                            <td>T</td>
+                            <td></td>
+                            <td>D</td>
+                            <td></td>
+                            <td>D</td>
+                            <td></td>
+                        </tr>
+                        <tr class="alt">
+                            <td>Waltz Strum 2</td>
+                            <td>D</td>
+                            <td></td>
+                            <td>D</td>
+                            <td>U</td>
+                            <td>D</td>
+                            <td></td>
+                            <td>D</td>
+                            <td></td>
+                            <td>D</td>
+                            <td>U</td>
+                            <td>D</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Waltz Strum 3</td>
+                            <td>D</td>
+                            <td></td>
+                            <td>D</td>
+                            <td>U</td>
+                            <td>D</td>
+                            <td>U</td>
+                            <td>D</td>
+                            <td></td>
+                            <td>D</td>
+                            <td>U</td>
+                            <td>D</td>
+                            <td>U</td>
+                        </tr>
+                        <tr class="alt">
+                            <td>Waltz Strum 4</td>
+                            <td>D</td>
+                            <td></td>
+                            <td>U</td>
+                            <td></td>
+                            <td>U</td>
+                            <td></td>
+                            <td>D</td>
+                            <td></td>
+                            <td>U</td>
+                            <td></td>
+                            <td>U</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section scripts
+{
+    <script type="text/javascript">
+        var icons = {
+            header: "ui-icon-circle-arrow-e",
+            activeHeader: "ui-icon-circle-arrow-s"
+        };
+
+        $(function() {
+            $("#accordion").accordion({
+                collapsible: true,
+                icons: icons,
+                heightStyle: "content"
+            });
+        });
+
+        $("#toggle").button().click(function () {
+            if ($("#accordion").accordion("option", "icons")) {
+                $("#accordion").accordion("option", "icons", null);
+            } else {
+                $("#accordion").accordion("option", "icons", icons);
+            }
+        });
+    </script>
+}
+
+<style>
+    #patterns 
+    {
+        font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    #patterns td, #patterns th 
+    {
+        font-size: 1em;
+        border: 1px solid #98bf21;
+        padding: 3px 7px 2px 7px;
+    }
+
+    #patterns th 
+    {
+        font-size: 1.1em;
+        text-align: left;
+        padding-top: 5px;
+        padding-bottom: 4px;
+        background-color: #18BC9C;
+        color: #ffffff;
+    }
+
+    #patterns tr.alt td 
+    {
+        color: #000000;
+        background-color: #9EFFEC;
+    }
+</style>

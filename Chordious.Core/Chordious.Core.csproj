@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2D7B6047-D9F1-49E7-A8BA-A51A44F60D0A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>com.jonthysell.Chordious.Core</RootNamespace>
+    <AssemblyName>Chordious.Core</AssemblyName>
+    <ReleaseVersion>1.0.1</ReleaseVersion>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <Externalconsole>true</Externalconsole>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <Externalconsole>true</Externalconsole>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="Chord.cs" />
+    <Compile Include="ChordOptions.cs" />
+    <Compile Include="ILineItem.cs" />
+    <Compile Include="Comment.cs" />
+    <Compile Include="ChordDocument.cs" />
+    <Compile Include="AppInfo.cs" />
+    <Compile Include="Instrument.cs" />
+    <Compile Include="Tuning.cs" />
+    <Compile Include="ChordQuality.cs" />
+    <Compile Include="ChordFinder.cs" />
+    <Compile Include="ChordResultSet.cs" />
+    <Compile Include="ChordFinderOptions.cs" />
+    <Compile Include="MarkUtils.cs" />
+    <Compile Include="NoteUtils.cs" />
+    <Compile Include="ConfigFile.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <None Include="builtin.xml" />
+  </ItemGroup>
+</Project>

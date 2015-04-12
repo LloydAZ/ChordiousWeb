@@ -1,0 +1,1033 @@
+﻿@{
+    ViewBag.Title = "Chord Families";
+}
+
+<div class="jumbotron">
+    <h2>@ViewBag.Title</h2>
+</div>
+<div class="row">
+    <div class="col-lg-12">
+        <div style="background: rgba(0, 0, 0, 0.15); padding:10px; border: inset; border-radius: 10px">
+            <p><h4>Notation:</h4></p>
+            <ul>
+                <li>The chord families listed here are based upon the Major scale. (i.e. Ionian Mode).</li>
+                <li>The chord families are grouped by their major and relative minor key signatures 
+                (i.e. Ab Major / E Minor - Both are four flats and have the same chords in the family.)</li>
+                <li>The chord sequences are listed above the chord names.  The left hand value is the major, 
+                and the right hand value is the relative minor (i.e.  I / III - I would be the first sequence in the major key, 
+                III would be the third sequence in the relative minor key.)</li>
+                <li>Sequence Number Meanings
+                    <ul>
+                        <li>Uppercase sequence numbers are played as Major Chords.</li>
+                        <li>Lowercase sequence numbers are played as Minor Chords.</li>
+                        <li>Exception the "VII / ii" sequence numbers are played as Diminished Chords.</li>
+                        <li>The V sequence can either be played as Major or as a Dominant 7 Chord. (i.e G or G7)</li>
+                    </ul>
+                </li>
+                <li>The Blues scale is sligtly different.  For more information, please visit 
+                <a href="http://www.jazclass.aust.com/scales/scablu.htm" target="_blank">Jazz Class.</a></li>
+            </ul>
+                
+            <p>
+                I will not be listing the equivilent chord families for other modes.  Please refer to the following chart
+                if you want to use another mode.  Please visit
+                <a href="http://www.guitarmasterclass.net/guitar_forum/index.php?showtopic=6023" target="_blank">GuitarMasterClass.net</a>
+                for a full tutorial on how chord families work.
+            </p>
+            <hr />
+            <table id="patterns">
+                <thead>
+                    <tr>
+                        <th>Mode</th>
+                        <th>I</th>
+                        <th>II</th>
+                        <th>III</th>
+                        <th>IV</th>
+                        <th>V</th>
+                        <th>VI</th>
+                        <th>VII</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="alt2">
+                        <td>Ionian</td>
+                        <td>Major</td>
+                        <td>Minor</td>
+                        <td>Minor</td>
+                        <td>Major</td>
+                        <td>Major</td>
+                        <td>Minor</td>
+                        <td>Diminished</td>
+                    </tr>
+                    <tr class="alt">
+                        <td>Dorian</td>
+                        <td>Minor</td>
+                        <td>Minor</td>
+                        <td>Major</td>
+                        <td>Major</td>
+                        <td>Minor</td>
+                        <td>Diminished</td>
+                        <td>Major</td>
+                    </tr>
+                    <tr class="alt2">
+                        <td>Phrygian</td>
+                        <td>Minor</td>
+                        <td>Major</td>
+                        <td>Major</td>
+                        <td>Minor</td>
+                        <td>Diminished</td>
+                        <td>Major</td>
+                        <td>Minor</td>
+                    </tr>
+                    <tr class="alt">
+                        <td>Lydian</td>
+                        <td>Major</td>
+                        <td>Major</td>
+                        <td>Minor</td>
+                        <td>Diminished</td>
+                        <td>Major</td>
+                        <td>Minor</td>
+                        <td>Minor</td>
+                    </tr>
+                    <tr class="alt2">
+                        <td>Mixolydian</td>
+                        <td>Major</td>
+                        <td>Minor</td>
+                        <td>Diminished</td>
+                        <td>Major</td>
+                        <td>Minor</td>
+                        <td>Minor</td>
+                        <td>Major</td>
+                    </tr>
+                    <tr class="alt">
+                        <td>Aeolian</td>
+                        <td>Minor</td>
+                        <td>Diminished</td>
+                        <td>Major</td>
+                        <td>Minor</td>
+                        <td>Minor</td>
+                        <td>Major</td>
+                        <td>Major</td>
+                    </tr>
+                    <tr class="alt2">
+                        <td>Locrian</td>
+                        <td>Diminished</td>
+                        <td>Major</td>
+                        <td>Minor</td>
+                        <td>Minor</td>
+                        <td>Major</td>
+                        <td>Major</td>
+                        <td>Minor</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<br />
+<div class="row">
+    <div class="col-lg-12">
+        <hr />
+        <h3>Major Keys and Relative Minor Keys</h3>
+        <hr />
+        <div id="accordion">
+            <h3>Ab Major / F Minor</h3>
+            <div>
+                <table id="patterns">
+                    <thead>
+                        <tr>
+                            <th>Number of Sharps or Flats</th>
+                            <th>I / III</th>
+                            <th>ii / iv</th>
+                            <th>iii / v</th>
+                            <th>IV / VI</th>
+                            <th>V / VII</th>
+                            <th>vi / i</th>
+                            <th style="font-style:italic">VII / ii</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Four Flats</td>
+                            <td>Ab</td>
+                            <td>Bbm</td>
+                            <td>Cm</td>
+                            <td>Db</td>
+                            <td>Eb</td>
+                            <td>Fm</td>
+                            <td>Gdim</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <h3>A Major / F# Minor</h3>
+            <div>
+                <table id="patterns">
+                    <thead>
+                        <tr>
+                            <th>Number of Sharps or Flats</th>
+                            <th>I / III</th>
+                            <th>ii / iv</th>
+                            <th>iii / v</th>
+                            <th>IV / VI</th>
+                            <th>V / VII</th>
+                            <th>vi / i</th>
+                            <th style="font-style:italic">VII / ii</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Three Sharps</td>
+                            <td>A</td>
+                            <td>Bm</td>
+                            <td>C#m</td>
+                            <td>D</td>
+                            <td>E</td>
+                            <td>F#m</td>
+                            <td>Gdim</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <h3>Bb Major / G Minor</h3>
+            <div>
+                <table id="patterns">
+                    <thead>
+                        <tr>
+                            <th>Number of Sharps or Flats</th>
+                            <th>I / III</th>
+                            <th>ii / iv</th>
+                            <th>iii / v</th>
+                            <th>IV / VI</th>
+                            <th>V / VII</th>
+                            <th>vi / i</th>
+                            <th style="font-style:italic">VII / ii</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Two Flats</td>
+                            <td>Bb</td>
+                            <td>Cm</td>
+                            <td>Dm</td>
+                            <td>Eb</td>
+                            <td>F</td>
+                            <td>Gm</td>
+                            <td>Adim</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <h3>B Major / G# Minor</h3>
+            <div>
+                <table id="patterns">
+                    <thead>
+                        <tr>
+                            <th>Number of Sharps or Flats</th>
+                            <th>I / III</th>
+                            <th>ii / iv</th>
+                            <th>iii / v</th>
+                            <th>IV / VI</th>
+                            <th>V / VII</th>
+                            <th>vi / i</th>
+                            <th style="font-style:italic">VII / ii</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Five Sharps</td>
+                            <td>B</td>
+                            <td>C#m</td>
+                            <td>D#m</td>
+                            <td>E</td>
+                            <td>F#</td>
+                            <td>G#m</td>
+                            <td>A#dim</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <h3>C Major / A Minor</h3>
+            <div>
+                <table id="patterns">
+                    <thead>
+                        <tr>
+                            <th>Number of Sharps or Flats</th>
+                            <th>I / III</th>
+                            <th>ii / iv</th>
+                            <th>iii / v</th>
+                            <th>IV / VI</th>
+                            <th>V / VII</th>
+                            <th>vi / i</th>
+                            <th style="font-style:italic">VII / ii</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>No Sharps or Flats</td>
+                            <td>C</td>
+                            <td>Dm</td>
+                            <td>Em</td>
+                            <td>F</td>
+                            <td>G</td>
+                            <td>Am</td>
+                            <td>Bdim</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <h3>C# Major / A# Minor</h3>
+            <div>
+                <table id="patterns">
+                    <thead>
+                        <tr>
+                            <th>Number of Sharps or Flats</th>
+                            <th>I / III</th>
+                            <th>ii / iv</th>
+                            <th>iii / v</th>
+                            <th>IV / VI</th>
+                            <th>V / VII</th>
+                            <th>vi / i</th>
+                            <th style="font-style:italic">VII / ii</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Seven Sharps</td>
+                            <td>C#</td>
+                            <td>D#m</td>
+                            <td>Fm</td>
+                            <td>F#</td>
+                            <td>G#</td>
+                            <td>A#m</td>
+                            <td>Cdim</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <h3>Db Major / Bb Minor</h3>
+            <div>
+                <table id="patterns">
+                    <thead>
+                        <tr>
+                            <th>Number of Sharps or Flats</th>
+                            <th>I / III</th>
+                            <th>ii / iv</th>
+                            <th>iii / v</th>
+                            <th>IV / VI</th>
+                            <th>V / VII</th>
+                            <th>vi / i</th>
+                            <th style="font-style:italic">VII / ii</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Five Flats</td>
+                            <td>Db</td>
+                            <td>Ebm</td>
+                            <td>Fm</td>
+                            <td>Gb</td>
+                            <td>Ab</td>
+                            <td>Bbm</td>
+                            <td>Cdim</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <h3>D Major / B Minor</h3>
+            <div>
+                <table id="patterns">
+                    <thead>
+                        <tr>
+                            <th>Number of Sharps or Flats</th>
+                            <th>I / III</th>
+                            <th>ii / iv</th>
+                            <th>iii / v</th>
+                            <th>IV / VI</th>
+                            <th>V / VII</th>
+                            <th>vi / i</th>
+                            <th style="font-style:italic">VII / ii</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Two Sharps</td>
+                            <td>D</td>
+                            <td>Em</td>
+                            <td>F#m</td>
+                            <td>G</td>
+                            <td>A</td>
+                            <td>Bm</td>
+                            <td>C#dim</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <h3>Eb Major / C Minor</h3>
+            <div>
+                <table id="patterns">
+                    <thead>
+                        <tr>
+                            <th>Number of Sharps or Flats</th>
+                            <th>I / III</th>
+                            <th>ii / iv</th>
+                            <th>iii / v</th>
+                            <th>IV / VI</th>
+                            <th>V / VII</th>
+                            <th>vi / i</th>
+                            <th style="font-style:italic">VII / ii</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Three Flats</td>
+                            <td>Eb</td>
+                            <td>Fm</td>
+                            <td>Gm</td>
+                            <td>Ab</td>
+                            <td>Bb</td>
+                            <td>Cm</td>
+                            <td>Ddim</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <h3>E Major / C# Minor</h3>
+            <div>
+                <table id="patterns">
+                    <thead>
+                        <tr>
+                            <th>Number of Sharps or Flats</th>
+                            <th>I / III</th>
+                            <th>ii / iv</th>
+                            <th>iii / v</th>
+                            <th>IV / VI</th>
+                            <th>V / VII</th>
+                            <th>vi / i</th>
+                            <th style="font-style:italic">VII / ii</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Four Sharps</td>
+                            <td>E</td>
+                            <td>F#m</td>
+                            <td>G#m</td>
+                            <td>A</td>
+                            <td>B</td>
+                            <td>C#m</td>
+                            <td>D#dim</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <h3>F Major / D Minor</h3>
+            <div>
+                <table id="patterns">
+                    <thead>
+                        <tr>
+                            <th>Number of Sharps or Flats</th>
+                            <th>I / III</th>
+                            <th>ii / iv</th>
+                            <th>iii / v</th>
+                            <th>IV / VI</th>
+                            <th>V / VII</th>
+                            <th>vi / i</th>
+                            <th style="font-style:italic">VII / ii</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>One Flat</td>
+                            <td>F</td>
+                            <td>Gm</td>
+                            <td>Am</td>
+                            <td>Bb</td>
+                            <td>C</td>
+                            <td>Dm</td>
+                            <td>Edim</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <h3>F# Major / D# Minor</h3>
+            <div>
+                <table id="patterns">
+                    <thead>
+                        <tr>
+                            <th>Number of Sharps or Flats</th>
+                            <th>I / III</th>
+                            <th>ii / iv</th>
+                            <th>iii / v</th>
+                            <th>IV / VI</th>
+                            <th>V / VII</th>
+                            <th>vi / i</th>
+                            <th style="font-style:italic">VII / ii</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Six Sharps</td>
+                            <td>F#</td>
+                            <td>G#m</td>
+                            <td>A#m</td>
+                            <td>B</td>
+                            <td>C#</td>
+                            <td>D#m</td>
+                            <td>Fdim</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <h3>G Major / E Minor</h3>
+            <div>
+                <table id="patterns">
+                    <thead>
+                        <tr>
+                            <th>Number of Sharps or Flats</th>
+                            <th>I / III</th>
+                            <th>ii / iv</th>
+                            <th>iii / v</th>
+                            <th>IV / VI</th>
+                            <th>V / VII</th>
+                            <th>vi / i</th>
+                            <th style="font-style:italic">VII / ii</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>One Sharp</td>
+                            <td>G</td>
+                            <td>Am</td>
+                            <td>Bm</td>
+                            <td>C</td>
+                            <td>D</td>
+                            <td>Em</td>
+                            <td>F#dim</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <h3>Gb Major / Eb Minor</h3>
+            <div>
+                <table id="patterns">
+                    <thead>
+                        <tr>
+                            <th>Number of Sharps or Flats</th>
+                            <th>I / III</th>
+                            <th>ii / iv</th>
+                            <th>iii / v</th>
+                            <th>IV / VI</th>
+                            <th>V / VII</th>
+                            <th>vi / i</th>
+                            <th style="font-style:italic">VII / ii</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Six Flats</td>
+                            <td>Gb</td>
+                            <td>Abm</td>
+                            <td>Bbm</td>
+                            <td>D</td>
+                            <td>Db</td>
+                            <td>Ebm</td>
+                            <td>Fdim</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <hr />
+        <h3>Blues Scale</h3>
+        <hr />
+        <div id="accordion2">
+            <h3>Ab Major / F Minor</h3>
+            <div>
+                <table id="patterns">
+                    <thead>
+                        <tr>
+                            <th>Number of Sharps or Flats</th>
+                            <th>I / III</th>
+                            <th>ii / iv</th>
+                            <th>iii / v</th>
+                            <th>IV / VI</th>
+                            <th>V / VII</th>
+                            <th>vi / i</th>
+                            <th style="font-style:italic">VII / ii</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Four Flats</td>
+                            <td>Ab</td>
+                            <td>Bm</td>
+                            <td>Dbm</td>
+                            <td>D</td>
+                            <td>Eb</td>
+                            <td>Gbm</td>
+                            <td>Abdim</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <h3>A Major / F# Minor</h3>
+            <div>
+                <table id="patterns">
+                    <thead>
+                        <tr>
+                            <th>Number of Sharps or Flats</th>
+                            <th>I / III</th>
+                            <th>ii / iv</th>
+                            <th>iii / v</th>
+                            <th>IV / VI</th>
+                            <th>V / VII</th>
+                            <th>vi / i</th>
+                            <th style="font-style:italic">VII / ii</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Three Sharps</td>
+                            <td>A</td>
+                            <td>Cm</td>
+                            <td>Dm</td>
+                            <td>Eb</td>
+                            <td>E</td>
+                            <td>Gm</td>
+                            <td>Adim</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <h3>Bb Major / G Minor</h3>
+            <div>
+                <table id="patterns">
+                    <thead>
+                        <tr>
+                            <th>Number of Sharps or Flats</th>
+                            <th>I / III</th>
+                            <th>ii / iv</th>
+                            <th>iii / v</th>
+                            <th>IV / VI</th>
+                            <th>V / VII</th>
+                            <th>vi / i</th>
+                            <th style="font-style:italic">VII / ii</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Two Flats</td>
+                            <td>Bb</td>
+                            <td>Dbm</td>
+                            <td>Ebm</td>
+                            <td>E</td>
+                            <td>F</td>
+                            <td>Abm</td>
+                            <td>Bbdim</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <h3>B Major / G# Minor</h3>
+            <div>
+                <table id="patterns">
+                    <thead>
+                        <tr>
+                            <th>Number of Sharps or Flats</th>
+                            <th>I / III</th>
+                            <th>ii / iv</th>
+                            <th>iii / v</th>
+                            <th>IV / VI</th>
+                            <th>V / VII</th>
+                            <th>vi / i</th>
+                            <th style="font-style:italic">VII / ii</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Five Sharps</td>
+                            <td>B</td>
+                            <td>Dm</td>
+                            <td>Em</td>
+                            <td>F</td>
+                            <td>F#</td>
+                            <td>Am</td>
+                            <td>Bdim</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <h3>C Major / A Minor</h3>
+            <div>
+                <table id="patterns">
+                    <thead>
+                        <tr>
+                            <th>Number of Sharps or Flats</th>
+                            <th>I / III</th>
+                            <th>ii / iv</th>
+                            <th>iii / v</th>
+                            <th>IV / VI</th>
+                            <th>V / VII</th>
+                            <th>vi / i</th>
+                            <th style="font-style:italic">VII / ii</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>No Sharps or Flats</td>
+                            <td>C</td>
+                            <td>Ebm</td>
+                            <td>Fm</td>
+                            <td>Gb</td>
+                            <td>G</td>
+                            <td>Bbm</td>
+                            <td>Cdim</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <h3>C# Major / A# Minor</h3>
+            <div>
+                <table id="patterns">
+                    <thead>
+                        <tr>
+                            <th>Number of Sharps or Flats</th>
+                            <th>I / III</th>
+                            <th>ii / iv</th>
+                            <th>iii / v</th>
+                            <th>IV / VI</th>
+                            <th>V / VII</th>
+                            <th>vi / i</th>
+                            <th style="font-style:italic">VII / ii</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Seven Sharps</td>
+                            <td>C#</td>
+                            <td>Em</td>
+                            <td>F#m</td>
+                            <td>G</td>
+                            <td>G#</td>
+                            <td>Bm</td>
+                            <td>C#dim</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <h3>Db Major / Bb Minor</h3>
+            <div>
+                <table id="patterns">
+                    <thead>
+                        <tr>
+                            <th>Number of Sharps or Flats</th>
+                            <th>I / III</th>
+                            <th>ii / iv</th>
+                            <th>iii / v</th>
+                            <th>IV / VI</th>
+                            <th>V / VII</th>
+                            <th>vi / i</th>
+                            <th style="font-style:italic">VII / ii</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Five Flats</td>
+                            <td>Db</td>
+                            <td>Em</td>
+                            <td>Gbm</td>
+                            <td>Gb</td>
+                            <td>Ab</td>
+                            <td>Bm</td>
+                            <td>Dbdim</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <h3>D Major / B Minor</h3>
+            <div>
+                <table id="patterns">
+                    <thead>
+                        <tr>
+                            <th>Number of Sharps or Flats</th>
+                            <th>I / III</th>
+                            <th>ii / iv</th>
+                            <th>iii / v</th>
+                            <th>IV / VI</th>
+                            <th>V / VII</th>
+                            <th>vi / i</th>
+                            <th style="font-style:italic">VII / ii</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Two Sharps</td>
+                            <td>D</td>
+                            <td>Fm</td>
+                            <td>Gm</td>
+                            <td>Ab</td>
+                            <td>A</td>
+                            <td>Cm</td>
+                            <td>Ddim</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <h3>Eb Major / C Minor</h3>
+            <div>
+                <table id="patterns">
+                    <thead>
+                        <tr>
+                            <th>Number of Sharps or Flats</th>
+                            <th>I / III</th>
+                            <th>ii / iv</th>
+                            <th>iii / v</th>
+                            <th>IV / VI</th>
+                            <th>V / VII</th>
+                            <th>vi / i</th>
+                            <th style="font-style:italic">VII / ii</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Three Flats</td>
+                            <td>Eb</td>
+                            <td>Gbm</td>
+                            <td>Abm</td>
+                            <td>A</td>
+                            <td>Bb</td>
+                            <td>Dbm</td>
+                            <td>Edim</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <h3>E Major / C# Minor</h3>
+            <div>
+                <table id="patterns">
+                    <thead>
+                        <tr>
+                            <th>Number of Sharps or Flats</th>
+                            <th>I / III</th>
+                            <th>ii / iv</th>
+                            <th>iii / v</th>
+                            <th>IV / VI</th>
+                            <th>V / VII</th>
+                            <th>vi / i</th>
+                            <th style="font-style:italic">VII / ii</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Four Sharps</td>
+                            <td>E</td>
+                            <td>Gm</td>
+                            <td>Am</td>
+                            <td>Bb</td>
+                            <td>B</td>
+                            <td>Dm</td>
+                            <td>Edim</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <h3>F Major / D Minor</h3>
+            <div>
+                <table id="patterns">
+                    <thead>
+                        <tr>
+                            <th>Number of Sharps or Flats</th>
+                            <th>I / III</th>
+                            <th>ii / iv</th>
+                            <th>iii / v</th>
+                            <th>IV / VI</th>
+                            <th>V / VII</th>
+                            <th>vi / i</th>
+                            <th style="font-style:italic">VII / ii</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>One Flat</td>
+                            <td>F</td>
+                            <td>Abm</td>
+                            <td>Bbm</td>
+                            <td>B</td>
+                            <td>C</td>
+                            <td>Ebm</td>
+                            <td>Fdim</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <h3>F# Major / D# Minor</h3>
+            <div>
+                <table id="patterns">
+                    <thead>
+                        <tr>
+                            <th>Number of Sharps or Flats</th>
+                            <th>I / III</th>
+                            <th>ii / iv</th>
+                            <th>iii / v</th>
+                            <th>IV / VI</th>
+                            <th>V / VII</th>
+                            <th>vi / i</th>
+                            <th style="font-style:italic">VII / ii</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Six Sharps</td>
+                            <td>F#</td>
+                            <td>Am</td>
+                            <td>Bm</td>
+                            <td>C</td>
+                            <td>C#</td>
+                            <td>Em</td>
+                            <td>F#dim</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <h3>G Major / E Minor</h3>
+            <div>
+                <table id="patterns">
+                    <thead>
+                        <tr>
+                            <th>Number of Sharps or Flats</th>
+                            <th>I / III</th>
+                            <th>ii / iv</th>
+                            <th>iii / v</th>
+                            <th>IV / VI</th>
+                            <th>V / VII</th>
+                            <th>vi / i</th>
+                            <th style="font-style:italic">VII / ii</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>One Sharp</td>
+                            <td>G</td>
+                            <td>Gbm</td>
+                            <td>Cm</td>
+                            <td>Db</td>
+                            <td>D</td>
+                            <td>Fm</td>
+                            <td>Gdim</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <h3>Gb Major / Eb Minor</h3>
+            <div>
+                <table id="patterns">
+                    <thead>
+                        <tr>
+                            <th>Number of Sharps or Flats</th>
+                            <th>I / III</th>
+                            <th>ii / iv</th>
+                            <th>iii / v</th>
+                            <th>IV / VI</th>
+                            <th>V / VII</th>
+                            <th>vi / i</th>
+                            <th style="font-style:italic">VII / ii</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Six Flats</td>
+                            <td>Gb</td>
+                            <td>Am</td>
+                            <td>Bm</td>
+                            <td>C</td>
+                            <td>Db</td>
+                            <td>Em</td>
+                            <td>Gbdim</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section scripts
+{
+    <script type="text/javascript">
+        var icons = {
+            header: "ui-icon-circle-arrow-e",
+            activeHeader: "ui-icon-circle-arrow-s"
+        };
+
+        $(function() {
+            $("#accordion").accordion({
+                collapsible: true,
+                icons: icons,
+                heightStyle: "content"
+            });
+        });
+
+        $("#toggle").button().click(function () {
+            if ($("#accordion").accordion("option", "icons")) {
+                $("#accordion").accordion("option", "icons", null);
+            } else {
+                $("#accordion").accordion("option", "icons", icons);
+            }
+        });
+
+        $(function () {
+            $("#accordion2").accordion({
+                collapsible: true,
+                icons: icons,
+                heightStyle: "content"
+            });
+        });
+
+        $("#toggle").button().click(function () {
+            if ($("#accordion2").accordion("option", "icons")) {
+                $("#accordion2").accordion("option", "icons", null);
+            } else {
+                $("#accordion2").accordion("option", "icons", icons);
+            }
+        });
+    </script>
+}
+
+<style>
+    #patterns 
+    {
+        font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    #patterns td, #patterns th 
+    {
+        font-size: 1em;
+        border: 1px solid #98bf21;
+        padding: 3px 7px 2px 7px;
+    }
+
+    #patterns th 
+    {
+        font-size: 1.1em;
+        text-align: left;
+        padding-top: 5px;
+        padding-bottom: 4px;
+        background-color: #18BC9C;
+        color: #ffffff;
+    }
+
+    #patterns tr.alt td 
+    {
+        color: #000000;
+        background-color: #9EFFEC;
+    }
+
+    #patterns tr.alt2 td 
+    {
+        color: #000000;
+        background-color: #FFFFFF;
+    }
+</style>

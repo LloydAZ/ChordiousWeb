@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Chordious Web", "Index", "Home")</li>
+                    <li>@Html.ActionLink("Strumming Patterns", "Strumming", "Home")</li>
+                    <li>@Html.ActionLink("Chord Families", "ChordFamilies", "Home")</li>
+                    <li>@Html.ActionLink("About Chordious Web", "About", "Home")</li>
+                    <li>@Html.ActionLink("How To Use Chordious Web", "HowTo", "Home")</li>
+                    <li>@Html.ActionLink("FAQ's", "FAQ", "Home")</li>
+                    <li>@Html.ActionLink("Links", "Links", "Home")</li>
+                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+        <div class="container body-content">
+            @RenderBody()
+
+            <hr />
+            <footer>
+                <p>&copy; @DateTime.Now.Year - Chordious - Jon Thysell - &copy; @DateTime.Now.Year - Chordious Web - Lloyd Lewis</p>
+            </footer>
+        </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/jqueryui")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

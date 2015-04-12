@@ -1,0 +1,204 @@
+﻿@model com.jonthysell.Chordious.Core.ChordFinderOptions
+@{
+    ViewBag.Title = "Chordious Web";
+}
+
+<div class="jumbotron">
+    <h1>Chordious Web</h1>
+    <h3>Based upon Chordious written by Jon Thysell</h3>
+</div>
+
+<div class="row">
+    @using (Html.BeginForm())
+    {
+    <div class="col-md-5" style="background: #DCDCDC; height: 100%">
+        <p><b>Selections:</b></p>
+        <p>
+            <label for="instrument" class="options">Instrument:</label>
+            @Html.DropDownList("Instruments",
+                            ViewBag.Instruments as SelectList,
+                            "Please select",
+                            new { id = "instrument" })
+        </p>
+        <p>
+            <label for="tuning" class="options">Tuning:</label>
+            <select id="tuning" disabled="disabled" style="width:200px"></select>
+        </p>
+        <p>
+            <label for="chordRoot" class="options">Chord Root:</label>
+            @Html.DropDownList("Notes")
+        </p>
+        <p>
+            <label for="chordQuality" class="options">Chord Quality:</label>
+            @Html.DropDownList("ChordQualities")
+        </p>
+        <hr />
+        <p><b>Options:</b></p>
+        <p>
+            <label for="numFrets" class="options">Num Frets:</label>
+            <input id="numFrets" name="value" class="spinnertxt" value="4">
+        </p>
+        <p>
+            <label for="maxFret" class="options">Max Fret:</label>
+            <input id="maxFret" name="value" class="spinnertxt" value="12">
+        </p>
+        <p>
+            <label for="maxReach" class="options">Max Reach:</label>
+            <input id="maxReach" name="value" class="spinnertxt" value="4">
+        </p>
+        <p>
+            @Html.CheckBox("autoAddBarres", new { value = Model.AutoAddBarres })
+            &nbsp;
+            <label>Auto Add Barres</label>
+        </p>
+        <p>
+            @Html.CheckBox("allowOpenStrings", new { value = Model.AllowOpenStrings })
+            &nbsp;
+            <label>Allow Open Strings</label>
+        </p>
+        <p>
+            @Html.CheckBox("allowMutedStrings", new { value = Model.AllowMutedStrings })
+            &nbsp;
+            <label>Allow Muted Strings</label>
+        </p>
+        <p>
+            @Html.CheckBox("mirrorResults", new { value = Model.MirrorResults })
+            &nbsp;
+            <label>Mirror Results</label>
+        </p>
+        <p>
+            @Html.CheckBox("allowRootlessChords", new { value = Model.AllowRootlessChords })
+            &nbsp;
+            <label>Add Rootless Chords</label>
+        </p>
+        <p>
+            <button type="button" value="Find Chords" id="findChords" disabled >Find Chords</button>
+        </p>
+
+    </div>
+    <div class="col-md-7">
+        <div class="row">
+            <div id="container" style="overflow-y:auto"></div>
+        </div>
+    </div>
+    }
+</div>
+
+@section scripts
+{
+    <script type="text/javascript">
+        // The button was clicked to find the chords for the selected instrument,
+        // tuning, key, chord quality, and options.
+        $(function () {
+            $("#findChords").click(function () {
+                var numFretsVal = $("#numFrets").val();
+                var maxFretsVal = $("#maxFret").val();
+                var maxReachVal = $("#maxReach").val();
+                var autoAddBarresVal = $("#autoAddBarres").prop('checked');
+                var allowOpenStringsVal = $("#allowOpenStrings").prop('checked');
+                var allowMutedStringssVal = $("#allowMutedStrings").prop('checked');
+                var mirrorResultsVal = $("#mirrorResults").prop('checked');
+                var allowRootlessChordsVal = $("#allowRootlessChords").prop('checked');
+                var instrumentVal = $("#instrument").val();
+                var tuningVal = $("#tuning").val();
+                var notesVal = $("#Notes").val();
+                var chordQualitiesVal = $("#ChordQualities").val();
+                var chordDefinition = 
+
+                // Make the call to the FindChords method in the home controller.
+                $.getJSON('@Url.Action("FindChords")', {
+                    instrument: instrumentVal,
+                    tuning: tuningVal,
+                    notes: notesVal,
+                    chordQualities: chordQualitiesVal,
+                    numFrets: numFretsVal,
+                    maxFrets: maxFretsVal,
+                    maxReach: maxReachVal,
+                    autoAddBarres: autoAddBarresVal,
+                    allowOpenStrings: allowOpenStringsVal,
+                    allowMutedStrings: allowMutedStringssVal,
+                    mirrorResults: mirrorResultsVal,
+                    allowRootlessChords: allowRootlessChordsVal
+                })
+                .done(function (data) {
+
+                    // Empty the container div first.
+                    $("#container").empty();
+
+                    // For each returned chord.
+                    $.each(data, function (i, chord) {
+                        $("#container").append(chord);
+                    });
+                })
+                .fail(function (jqxhr, textStatus, error) {
+                    var err = textStatus + ", " + error;
+                    console.log("Request Failed: " + err);
+                });
+            });
+        });
+
+        // The instrument has changed in the drop-down list.
+        // Get the tunings available for the selected instrument.
+        $(function () {
+            $('#instrument').on('change', function () {
+                var tuningDropdown = $('#tuning');
+                var findButton = $('#findChords');
+
+                // Disable tuning drop down and the find button.
+                tuningDropdown.prop('disabled', 'disabled');
+                findButton.prop('disabled', 'disabled');
+
+                // Clear drop down of old tunings.
+                tuningDropdown.empty();
+
+                // Retrieve selected instrument
+                var instrument = $(this).val();
+
+                if (instrument.length > 0) {
+
+                    // Make the call to the GetTuningsForDropdown method in the home controller.
+                    $.getJSON('@Url.Action("GetTuningsForDropdown")', {
+                        instrument: instrument
+                    })
+                    .done(function (data) {
+
+                        // Re-enable tuning drop down.
+                        tuningDropdown.removeProp('disabled');
+                        findButton.removeProp('disabled');
+
+                        // For each returned tuning.
+                        $.each(data, function (i, tuning) {
+
+                            // Create new option.
+                            var option = $('<option />').html(tuning);
+
+                            // Append to drop down.
+                            tuningDropdown.append(option);
+                        });
+                    })
+                    .fail(function (jqxhr, textStatus, error) {
+                        var err = textStatus + ", " + error;
+                        console.log("Request Failed: " + err);
+                    });
+                }
+            });
+        });
+
+        $(".spinnertxt").spinner();
+        $(".spinnertxt").spinner({ min: 1 });
+    </script>
+}
+
+<style>
+    .spinnertxt 
+    {
+        width: 20px;
+    }
+
+    .options
+    {
+        width: 100px;
+        display: inline-block;
+        text-align: right;
+    }
+</style>
